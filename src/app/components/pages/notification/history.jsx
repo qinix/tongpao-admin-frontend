@@ -72,7 +72,14 @@ let HistoryPage = React.createClass({
               showExpandableButton={true}>
             </CardHeader>
             <CardText expandable={true}>
-              {h.content}
+            {h.content.split("\n").map(function(text, key) {
+              return (
+                <span>
+                  {text}
+                  <br />
+                </span>
+              )
+            })}
             </CardText>
           </Card>
         </div>
