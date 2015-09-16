@@ -30,8 +30,8 @@ var config = {
     new webpack.NoErrorsPlugin(),
     //Transfer Files
     new TransferWebpackPlugin([
+      {from: 'css'},
       {from: 'www'}
-      {from: 'css'}
     ], path.resolve(__dirname,"src"))
   ],
   module: {
